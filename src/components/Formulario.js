@@ -11,13 +11,13 @@ const Formulario = (props) => {
       </div>
       <div className="row form-group">
         <div className="col-md-6">
-          <label for="selectFrom">From:</label>
-          <ListaMoeda />
+          <label htmlFor="selectFrom">From:</label>
+          <ListaMoeda origem="from" />
         </div>
 
         <div className="col-md-6">
-          <label for="selectTo">To:</label>
-          <ListaMoeda />
+          <label htmlFor="selectTo">To:</label>
+          <ListaMoeda origem="to" />
         </div>
       </div>
       <div className="row">

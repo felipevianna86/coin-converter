@@ -2,7 +2,7 @@ import React from "react";
 
 const ListaMoeda = (props) => {
   return (
-    <select name="currencies" className="form-control">
+    <select name={props.origem} className="form-control">
       <option value="AED" title="United Arab Emirates Dirham">
         AED
       </option>
