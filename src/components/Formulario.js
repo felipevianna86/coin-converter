@@ -1,4 +1,5 @@
 import React from "react";
+import ListaMoeda from "./ListaMoedas";
 
 const Formulario = (props) => {
   return (
@@ -11,30 +12,18 @@ const Formulario = (props) => {
       <div className="row form-group">
         <div className="col-md-6">
           <label for="selectFrom">From:</label>
-          <select className="form-control" id="selectFrom">
-            <option value="brl" label="$RS">
-              BRL
-            </option>
-            <option value="usd" label="$USD" selected>
-              USD
-            </option>
-          </select>
+          <ListaMoeda />
         </div>
 
         <div className="col-md-6">
           <label for="selectTo">To:</label>
-          <select className="form-control" id="selectTo">
-            <option value="brl" label="$RS">
-              BRL
-            </option>
-            <option value="usd" label="$USD">
-              USD
-            </option>
-          </select>
-          <a href="#" className="btn btn-primary">
-            Converter
-          </a>
+          <ListaMoeda />
         </div>
+      </div>
+      <div className="row">
+        <button type="button" className="btn btn-primary btn-lg btn-block">
+          Converter
+        </button>
       </div>
     </form>
   );
