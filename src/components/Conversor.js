@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import Formulario from "./Formulario";
 
@@ -10,7 +10,7 @@ const Conversor = (props) => {
           <div className="card-header bg-info">Câmbio Natal</div>
           <Formulario />
           <div className="card-footer text-light bg-dark">
-            {JSON.stringfy(props.converter)}
+            {JSON.stringify(props.converter)}
           </div>
         </div>
       </div>
@@ -19,7 +19,7 @@ const Conversor = (props) => {
 };
 
 function mapStateToProps(state) {
-  converter: state.converter;
+  return { converter: state.converter };
 }
 
 export default connect(mapStateToProps, null)(Conversor);
