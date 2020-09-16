@@ -4,9 +4,10 @@ const INITIAL_STATE = [];
 
 export default function (state = INITIAL_STATE, action) {
   if (action.type === COIN_CONVERTER) {
-    const result = action.payload.data;
-
-    return result;
+    return {
+      result: action.payload.data,
+      amount: action.amount,
+    };
   }
   return state;
 }

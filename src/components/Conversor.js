@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import Formulario from "./Formulario";
 
@@ -10,7 +10,8 @@ const Conversor = (props) => {
           <div className="card-header bg-info">Câmbio Natal</div>
           <Formulario />
           <div className="card-footer text-light bg-dark">
-            {JSON.stringify(props.converter)}
+            {props.converter.quotes &&
+              props.converter.quotes[Object.keys(props.converter.quotes)[0]]}
           </div>
         </div>
       </div>
