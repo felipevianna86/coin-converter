@@ -1,5 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 import ListaMoeda from "./ListaMoedas";
+
+import { coinConverter } from "../actions";
 
 const Formulario = (props) => {
   return (
@@ -29,4 +33,8 @@ const Formulario = (props) => {
   );
 };
 
-export default Formulario;
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ coinConverter, dispatch });
+}
+
+export default connect(null, mapDispatchToProps)(Formulario);
